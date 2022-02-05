@@ -14,3 +14,5 @@ Importante! Olhe os application.yml!
 
 Me baseei nisto:
 https://www.youtube.com/watch?v=tGGo15irME8&list=PLyHJZXNdCXsd2e3NMW9sZbto8RB5foBtp&index=2
+
+![alt_text](https://github.com/RaphaelStopa/Star-wars-API-study-in-java/blob/master/src/main/resources/static/star%20wars.jpg)
