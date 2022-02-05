@@ -1,4 +1,4 @@
-# Base de microsserviços em java com Eureka
+# Base de microsserviços em java com Eureka(discovery) e Hystrix (circuit breaker)
 
 Como começa:
 Nas dependências de cada serviço, basta você colocar o que colocaria em um API que você quisesse fazer normalmente. Apenas acrescente um Eureka client.
@@ -20,8 +20,6 @@ Exemplo de bean do rest templete, que pode ser usado para se comunicar entre os 
 
 Usando o rest templete. Lembre de colocar um circuit breaker aqui:
 ![alt_text](https://github.com/RaphaelStopa/microsservi-o-base/blob/master/usando%20rest%20templete%2C%20lembre%20que%20poder%20dar%20um%20erro%20se%20o%20outro%20serviso%20caiu%2C%20etao%20ter%20que%20usar%20o%20circuit%20breaker.png)
-
-
 
 Tela
 ![alt_text](https://github.com/RaphaelStopa/microsservi-o-base/blob/master/eureka%20tela.png)
