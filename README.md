@@ -18,4 +18,6 @@ https://www.youtube.com/watch?v=tGGo15irME8&list=PLyHJZXNdCXsd2e3NMW9sZbto8RB5fo
 ![alt_text](https://github.com/RaphaelStopa/microsservi-o-base/blob/master/usando%20rest%20templete%2C%20lembre%20que%20poder%20dar%20um%20erro%20se%20o%20outro%20serviso%20caiu%2C%20etao%20ter%20que%20usar%20o%20circuit%20breaker.png)
 
 
-![alt_text](https://github.com/RaphaelStopa/microsservi-o-base/blob/master/usando%20rest%20templete%2C%20lembre%20que%20poder%20dar%20um%20erro%20se%20o%20outro%20serviso%20caiu%2C%20etao%20ter%20que%20usar%20o%20circuit%20breaker.png)
+![alt_text](https://github.com/RaphaelStopa/microsservi-o-base/blob/master/exemplo%20de%20bean%20de%20rest%20templete.png)
+
+![alt_text](https://github.com/RaphaelStopa/microsservi-o-base/blob/master/exemplo%20de%20bean%20de%20rest%20templete.png)
