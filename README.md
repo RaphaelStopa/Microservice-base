@@ -12,7 +12,7 @@ Lembre-se, que muitas vezes microservisos podem usar as mesmas dependências. Se
 É bem possível que em mesmo micro serviço precisasse de classes iguais há um outro. Assim sendo, o correto e junta-los e importar o artifact nos Pom`s que precisam deles. Exemplo apenas:
 https://github.com/RaphaelStopa/microservice-for-base
 
-Importante! Olhe os application.yml!
+Importante! Olhe os application.yml e o ServiceOne é o mais completo. Não ajustei corretamente o Two, ele é só exemplo.
 
 O Resilience4j foi só aplicado no ServiceOne.
 
@@ -30,3 +30,9 @@ como bloquear uma porta para acesso externo (acho que eh em server. Nao acho que
 falta o JWT
 
 https://www.youtube.com/watch?v=8FWzFnLpTc8&list=PLyHJZXNdCXsd2e3NMW9sZbto8RB5foBtp&index=5
+
+
+para evitar ficar escrevendo url repedidadmente quando quiser fazer uma requisicao de um service a outro, usei o open feign
+https://www.youtube.com/watch?v=P-T_E5uP6m8&list=PL4bT56Uw3S4yTSw5Cg1-mhgoS85fVeFkT&index=5
+
+aula 7

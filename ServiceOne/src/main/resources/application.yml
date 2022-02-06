@@ -21,35 +21,6 @@ spring:
   application:
     name: ONE-SERVICE
 
-#resilience4j:
-#  circuitbreaker:
-#    instances:
-##      aqui você tinha que colocar o nome da instancia como aparece no print do projeto
-#      helloService:
-#        registerHealthIndicator: true
-#        eventConsumerBufferSize: 10
-#        automaticTransitionFromOpenToHalfOpenEnabled: true
-#        failureRateThreshold: 50
-#        minimumNumberOfCalls: 5
-#        permittedNumberOfCallsInHalfOpenState: 3
-#        slidingWindowSize: 10
-#        waitDurationInOpenState: 5s
-#        slidingWindowType: COUNT_BASED
-#
-#management:
-#  health:
-#    circuitbreakers:
-#      enabled: true
-#  endpoints:
-#    web:
-#      exposure:
-#        include: health
-#  endpoint:
-#    health:
-#      show-details: always
-
-
-
 
 resilience4j:
   circuitbreaker:
@@ -78,6 +49,15 @@ management:
       show-details: always
 
 
+#funciona sem isto, vem como default
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      default-zone: http://localhost:8761/eureka/
+    instance:
+      hostname: localhost
 
 
 
@@ -87,7 +67,7 @@ management:
 #    prefer-ip-address: true
 #  client:
 #    service-url:
-#      defaultZone: http://localhost:8081/eureka/
+#      defaultZone: http://localhost:8761/eureka/
 #    register-with-eureka: true
 
 

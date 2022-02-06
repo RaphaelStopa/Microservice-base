@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 @RestController
+//Não precisa disto pq já coloquei no application
 //@RequestMapping("/one")
 //Ira roda na porta http://localhost:8081/one
 public class TestResource {
@@ -19,6 +20,7 @@ public class TestResource {
 
     private RestTemplate restTemplate;
 
+    // Tetse para ver se o artifact, esta ok no Pom
 //    Shared nha = new Shared();
 
 
@@ -36,6 +38,9 @@ public class TestResource {
     @GetMapping("/hello")
     @CircuitBreaker(name= HELLO_SERVICE, fallbackMethod = "helloFallback")
     public ResponseEntity<String> sayHello(){
+
+//        vi em um tudo que despois de resgitrado o cara conseguia por apenas o nome do service no local do localhost:8080 e continuava a dar certo
+        // teste isto, ets em um TODO no cpnfigue
 
         String response = restTemplate.getForObject("http://localhost:8082/two", String.class);
         return new ResponseEntity<String>(response, HttpStatus.OK);
