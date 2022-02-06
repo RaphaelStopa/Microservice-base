@@ -29,4 +29,6 @@ Bloquear requisicoes que nao venham do gateway
 
 por resilience4j
 
+JWT
+
 https://www.youtube.com/watch?v=8FWzFnLpTc8&list=PLyHJZXNdCXsd2e3NMW9sZbto8RB5foBtp&index=5
