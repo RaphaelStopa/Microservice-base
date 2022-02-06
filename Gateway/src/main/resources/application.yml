@@ -1,0 +1,24 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: GATEWAY
+
+  cloud:
+    gateway:
+      routes:
+        - id: ONE-SERVICE
+          uri:
+            lb://ONE-SERVICE
+          predicates:
+            - Path=/one/**
+
+        - id: TWO-SERVICE
+          uri:
+            lb://TWO-SERVICE
+          predicates:
+            - Path=/two/**
+
+
+

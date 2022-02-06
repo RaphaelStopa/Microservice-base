@@ -1,4 +1,4 @@
-# Base de microsserviços em java com Eureka(discovery) e Hystrix (circuit breaker)
+# Base de microsserviços em java com Eureka(discovery) e Hystrix (circuit breaker) TROCAR ESTE PELO Resilience4J E DAI TIRE O @EnableCircuitBreaker
 
 Como começa:
 Nas dependências de cada serviço, basta você colocar o que colocaria em um API que você quisesse fazer normalmente. Apenas acrescente um Eureka client.
@@ -23,3 +23,10 @@ Usando o rest templete. Lembre de colocar um circuit breaker aqui:
 
 Tela
 ![alt_text](https://github.com/RaphaelStopa/microsservi-o-base/blob/master/eureka%20tela.png)
+
+O gateway so precisad o cloud gateway e do eureka client -escrever isto
+Bloquear requisicoes que nao venham do gateway
+
+por resilience4j
+
+https://www.youtube.com/watch?v=8FWzFnLpTc8&list=PLyHJZXNdCXsd2e3NMW9sZbto8RB5foBtp&index=5
