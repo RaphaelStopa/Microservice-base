@@ -30,14 +30,6 @@ Tela
 
 Bloquear requisicoes que nao venham do gateway
 
-para usar ele tambem precisa de starte actuator, starter aop e ele obvio
-
 JWT
-
-ver se isto funciona melhor que escrever paths a mao
-server:
-port: 8080
-servlet:
-context-path: /gateway
 
 https://www.youtube.com/watch?v=8FWzFnLpTc8&list=PLyHJZXNdCXsd2e3NMW9sZbto8RB5foBtp&index=5
