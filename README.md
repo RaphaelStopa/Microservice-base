@@ -1,4 +1,4 @@
-# Base de microsserviços em java com Eureka(discovery) e Resilience4j(circuit breaker).
+# Base de microsserviços em java com Eureka (discovery) e Resilience4j (circuit breaker).
 
 Como começa:
 Nas dependências de cada serviço, basta você colocar o que colocaria em um API que você quisesse fazer normalmente. Apenas acrescente um Eureka client.
@@ -31,6 +31,6 @@ Tela
 Bloquear requisicoes que nao venham do gateway
 como bloquear uma porta para acesso externo (acho que eh em server. Nao acho que de por aqui)
 
-JWT
+falta o JWT
 
 https://www.youtube.com/watch?v=8FWzFnLpTc8&list=PLyHJZXNdCXsd2e3NMW9sZbto8RB5foBtp&index=5
