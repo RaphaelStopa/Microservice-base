@@ -29,6 +29,7 @@ Tela
 ![alt_text](https://github.com/RaphaelStopa/microsservi-o-base/blob/master/eureka%20tela.png)
 
 Bloquear requisicoes que nao venham do gateway
+como bloquear uma porta para acesso externo (acho que eh em server. Nao acho que de por aqui)
 
 JWT
 
