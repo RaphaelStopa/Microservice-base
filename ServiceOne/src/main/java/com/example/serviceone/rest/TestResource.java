@@ -15,14 +15,6 @@ public class TestResource {
 
     private static final String HELLO_SERVICE = "helloService";
 
-//    private static final String ORDER_SERVICE = "orderService";
-//
-//    @Bean
-//    public RestTemplate getRestTemplate() {
-//        return new RestTemplate();
-//    }
-
-
     private RestTemplate restTemplate;
 
     public TestResource(RestTemplate restTemplate) {
@@ -46,17 +38,4 @@ public class TestResource {
         return new ResponseEntity<String>("Service is down", HttpStatus.OK);
 
     }
-
-//    @GetMapping("/order")
-//    @CircuitBreaker(name=ORDER_SERVICE, fallbackMethod = "orderFallback")
-//    public ResponseEntity<String> createOrder(){
-//        String response = restTemplate.getForObject("http://localhost:8082/two", String.class);
-//        return new ResponseEntity<String>(response, HttpStatus.OK);
-//    }
-//    public ResponseEntity<String> orderFallback(Exception e){
-//        return new ResponseEntity<String>("Item service is down", HttpStatus.OK);
-//
-//    }
-
-
 }
