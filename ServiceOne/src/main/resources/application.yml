@@ -25,7 +25,7 @@ spring:
 #  circuitbreaker:
 #    instances:
 ##      aqui você tinha que colocar o nome da instancia como aparece no print do projeto
-#      orderService:
+#      helloService:
 #        registerHealthIndicator: true
 #        eventConsumerBufferSize: 10
 #        automaticTransitionFromOpenToHalfOpenEnabled: true
@@ -47,6 +47,37 @@ spring:
 #  endpoint:
 #    health:
 #      show-details: always
+
+
+
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      helloService:
+        registerHealthIndicator: true
+        eventConsumerBufferSize: 10
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+        failureRateThreshold: 50
+        minimumNumberOfCalls: 5
+        permittedNumberOfCallsInHalfOpenState: 3
+        slidingWindowSize: 10
+        waitDurationInOpenState: 5s
+        slidingWindowType: COUNT_BASED
+
+management:
+  health:
+    circuitbreakers:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      show-details: always
+
+
 
 
 
