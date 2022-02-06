@@ -39,6 +39,13 @@
 <!--        para o circuit breaker termina aqui-->
 
 
+<!--        aqui estou importanto o artifact que tem propriedades de desejo e serao compartinhadas-->
+        <dependency>
+            <groupId>com.example</groupId>
+            <artifactId>Shared</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!--        aqui estou importanto o artifact que tem propriedades de desejo e serao compartinhadas-->
 
 
         <dependency>

@@ -16,6 +16,8 @@ Importante! Olhe os application.yml!
 
 O Resilience4j foi só aplicado no ServiceOne.
 
+Eu fiz em exemplo de compartinhamento entre modulos. Importei o Shared no ServiceOne (Pom). Caso ele fosse nescessarios a todos. Teria que fazer um parent de um Pom acima.
+
 Me baseei nisto:
 https://www.youtube.com/watch?v=tGGo15irME8&list=PLyHJZXNdCXsd2e3NMW9sZbto8RB5foBtp&index=2
 
