@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/two")
+//Ira roda na porta http://localhost:8082/two
 public class TestResource {
 
     @GetMapping
