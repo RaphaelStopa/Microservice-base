@@ -24,21 +24,16 @@ https://www.youtube.com/watch?v=tGGo15irME8&list=PLyHJZXNdCXsd2e3NMW9sZbto8RB5fo
 Tela
 ![alt_text](https://github.com/RaphaelStopa/microsservi-o-base/blob/master/eureka%20tela.png)
 
-Bloquear requisicoes que nao venham do gateway
-como bloquear uma porta para acesso externo (acho que eh em server. Nao acho que de por aqui)
+FALTA FAZER:
+Autenticação com JWT.
+Se tiver tempo aplicar Zipkin e Sleuth.
+Retirar files inúteis do Shared.
+Lembrar de colocar dependências no arquivo shared e retirar dos demais. O mesmo vale para entityes e afins.
+Open feign, se tiver tempo.
+Checar gitinores.
 
-falta o JWT
-
+PROJETO BASEADO EM:
 https://www.youtube.com/watch?v=zPCri-b5oCQ&list=PL4bT56Uw3S4yTSw5Cg1-mhgoS85fVeFkT&index=8
 
-acho que nao precisa inicar o projeto sehered, tirar o desnecessario
-
-para evitar ficar escrevendo url repedidadmente quando quiser fazer uma requisicao de um service a outro, usei o open feign
-https://www.youtube.com/watch?v=P-T_E5uP6m8&list=PL4bT56Uw3S4yTSw5Cg1-mhgoS85fVeFkT&index=5
-
-aula 7
-
-colocar Zipkin y Sleuth mais documentar bem antes, para naos e esquecer
 
 
-https://www.youtube.com/watch?v=9b6OOGMpx5Y&list=PLSVW22jAG8pDY3lXXEv1hKVIAlnJ9nDN_
