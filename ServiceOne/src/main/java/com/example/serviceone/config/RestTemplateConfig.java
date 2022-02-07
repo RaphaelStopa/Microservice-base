@@ -11,7 +11,7 @@ public class RestTemplateConfig {
 
     @Bean
     // TODO tem que ajustar para isto https://stackoverflow.com/questions/39587317/difference-between-ribbonclient-and-loadbalanced
-//    @LoadBalanced
+    @LoadBalanced
     public RestTemplate restTemplate(RestTemplateBuilder builder) {
         return builder.build();
     }

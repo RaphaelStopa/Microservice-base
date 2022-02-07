@@ -29,10 +29,15 @@ como bloquear uma porta para acesso externo (acho que eh em server. Nao acho que
 
 falta o JWT
 
-https://www.youtube.com/watch?v=8FWzFnLpTc8&list=PLyHJZXNdCXsd2e3NMW9sZbto8RB5foBtp&index=5
+https://www.youtube.com/watch?v=zPCri-b5oCQ&list=PL4bT56Uw3S4yTSw5Cg1-mhgoS85fVeFkT&index=8
 
+acho que nao precisa inicar o projeto sehered, tirar o desnecessario
 
 para evitar ficar escrevendo url repedidadmente quando quiser fazer uma requisicao de um service a outro, usei o open feign
 https://www.youtube.com/watch?v=P-T_E5uP6m8&list=PL4bT56Uw3S4yTSw5Cg1-mhgoS85fVeFkT&index=5
 
 aula 7
+
+
+
+https://www.youtube.com/watch?v=9b6OOGMpx5Y&list=PLSVW22jAG8pDY3lXXEv1hKVIAlnJ9nDN_
