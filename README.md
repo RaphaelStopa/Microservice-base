@@ -38,6 +38,7 @@ https://www.youtube.com/watch?v=P-T_E5uP6m8&list=PL4bT56Uw3S4yTSw5Cg1-mhgoS85fVe
 
 aula 7
 
+colocar Zipkin y Sleuth mais documentar bem antes, para naos e esquecer
 
 
 https://www.youtube.com/watch?v=9b6OOGMpx5Y&list=PLSVW22jAG8pDY3lXXEv1hKVIAlnJ9nDN_
