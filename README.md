@@ -19,9 +19,6 @@ O Resilience4j foi só aplicado no ServiceOne.
 Eu fiz em exemplo de compartinhamento entre modulos. Importei o Shared no ServiceOne (Pom). Caso ele fosse nescessarios a todos. Teria que fazer um parent de um Pom acima.
 
 
-Tela
-![alt_text](https://github.com/RaphaelStopa/microsservi-o-base/blob/master/eureka%20tela.png)
-
 FALTA FAZER:
 Autenticação com JWT.
 Se tiver tempo aplicar Zipkin e Sleuth.
