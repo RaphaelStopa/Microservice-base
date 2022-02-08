@@ -18,8 +18,6 @@ O Resilience4j foi só aplicado no ServiceOne.
 
 Eu fiz em exemplo de compartinhamento entre modulos. Importei o Shared no ServiceOne (Pom). Caso ele fosse nescessarios a todos. Teria que fazer um parent de um Pom acima.
 
-Me baseei nisto:
-https://www.youtube.com/watch?v=tGGo15irME8&list=PLyHJZXNdCXsd2e3NMW9sZbto8RB5foBtp&index=2
 
 Tela
 ![alt_text](https://github.com/RaphaelStopa/microsservi-o-base/blob/master/eureka%20tela.png)
@@ -32,8 +30,7 @@ Lembrar de colocar dependências no arquivo shared e retirar dos demais. O mesmo
 Open feign, se tiver tempo.
 Checar gitinores.
 
-PROJETO BASEADO EM:
-https://www.youtube.com/watch?v=zPCri-b5oCQ&list=PL4bT56Uw3S4yTSw5Cg1-mhgoS85fVeFkT&index=8
+
 
 
 
