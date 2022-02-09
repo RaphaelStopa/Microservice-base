@@ -39,5 +39,3 @@ Fazer um banco para cada quando terminar aqui!
 JWT funciona mais precisa melhor a exposicao de erro. Muito generico
 
 
-
-
