@@ -34,5 +34,12 @@ spring:
   application:
     name: AUTH-SERVICE
 
-
-
+#VER AQUI
+admin-paths:
+  paths:
+    -
+      uri: "/user"
+      method: "POST"
+    -
+      uri: "/user/savecar/{1} [1-9] + [0-9]"
+      method: "POST"

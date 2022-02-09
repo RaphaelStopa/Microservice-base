@@ -2,6 +2,8 @@ package com.example.authservice.service;
 
 import com.example.authservice.domain.AuthUser;
 import com.example.authservice.facade.AuthUserDto;
+import com.example.authservice.facade.NewUserDTO;
+import com.example.authservice.facade.RequestDTO;
 import com.example.authservice.facade.TokenDto;
 import com.example.authservice.repository.AuthUserRepository;
 import com.example.authservice.security.JwtProvider;
@@ -23,7 +25,7 @@ public class AuthUserService {
     @Autowired
     JwtProvider jwtProvider;
 
-    public AuthUser save(AuthUserDto dto) {
+    public AuthUser save(NewUserDTO dto) {
         Optional<AuthUser> user = authUserRepository.findByUserName(dto.getUserName());
         if(user.isPresent())
             return null;
@@ -31,6 +33,7 @@ public class AuthUserService {
         AuthUser authUser = AuthUser.builder()
                 .userName(dto.getUserName())
                 .password(password)
+                .role(dto.getRole())
                 .build();
         return authUserRepository.save(authUser);
     }
@@ -44,8 +47,8 @@ public class AuthUserService {
         return null;
     }
 
-    public TokenDto validate(String token) {
-        if(!jwtProvider.validate(token))
+    public TokenDto validate(String token, RequestDTO dto) {
+        if(!jwtProvider.validate(token, dto))
             return null;
         String username = jwtProvider.getUserNameFromToken(token);
         if(!authUserRepository.findByUserName(username).isPresent())
