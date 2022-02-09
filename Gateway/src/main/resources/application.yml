@@ -14,14 +14,25 @@ spring:
         - id: ONE-SERVICE
           uri:
             lb://ONE-SERVICE
+
+          filters:
+#            Importante que tenha o mesmo nome da classe. Copie e cole para nao errar
+            - AuthFilter
+
           predicates:
             - Path=/one/**
-
         - id: TWO-SERVICE
           uri:
             lb://TWO-SERVICE
           predicates:
             - Path=/two/**
+
+        - id: AUTH-SERVICE
+          uri:
+            lb://AUTH-SERVICE
+          predicates:
+            - Path=/auth/**
+
 
 
 eureka:
