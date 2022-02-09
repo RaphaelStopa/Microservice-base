@@ -41,3 +41,5 @@ public class AuthUserController {
         return ResponseEntity.ok(authUser);
     }
 }
+
+https://www.youtube.com/watch?v=wF98ikyyKEI&list=PL4bT56Uw3S4yTSw5Cg1-mhgoS85fVeFkT&index=11

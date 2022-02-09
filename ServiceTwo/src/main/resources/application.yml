@@ -19,6 +19,7 @@ spring:
 
   application:
     name: TWO-SERVICE
+    zipkin: http://localhost:9411
 
 eureka:
   client:

@@ -1,4 +1,4 @@
-# Base de microsserviços em java com Eureka (discovery), Resilience4j (circuit breaker) JTW.
+# Base de microsserviços em java com Eureka (discovery), Resilience4j (circuit breaker) JTW, Zipkin (sistema de rastreamento distribuído, precisa do .jar e rodar o mesmo)
 
 Como começa:
 Nas dependências de cada serviço, basta você colocar o que colocaria em um API que você quisesse fazer normalmente. Apenas acrescente um Eureka client.
@@ -18,13 +18,14 @@ O Resilience4j foi só aplicado no ServiceOne.
 
 Eu fiz em exemplo de compartinhamento entre modulos. Importei o Shared no ServiceOne (Pom). Caso ele fosse nescessarios a todos. Teria que fazer um parent de um Pom acima.
 
+https://zipkin.io/
+
 FALTA FAZER:
 
 ````
 
 Autenticação com JWT. De preferencia marcando, agora tera que refatorar tudo
 
-Se tiver tempo aplicar Zipkin e Sleuth.
 
 Retirar files inúteis do Shared.
 
