@@ -1,4 +1,4 @@
-# Base de microsserviços em java com Eureka (discovery) e Resilience4j (circuit breaker).
+# Base de microsserviços em java com Eureka (discovery), Resilience4j (circuit breaker) JTW.
 
 Como começa:
 Nas dependências de cada serviço, basta você colocar o que colocaria em um API que você quisesse fazer normalmente. Apenas acrescente um Eureka client.
@@ -20,6 +20,8 @@ Eu fiz em exemplo de compartinhamento entre modulos. Importei o Shared no Servic
 
 FALTA FAZER:
 
+````
+
 Autenticação com JWT. De preferencia marcando, agora tera que refatorar tudo
 
 Se tiver tempo aplicar Zipkin e Sleuth.
@@ -38,4 +40,4 @@ Fazer um banco para cada quando terminar aqui!
 
 JWT funciona mais precisa melhor a exposicao de erro. Muito generico
 
-
+talvez ja fzer um docker para cada DB com as migrations
