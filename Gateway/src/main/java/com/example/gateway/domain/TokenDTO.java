@@ -5,6 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+// Só para ao JWT
 @NoArgsConstructor
 @AllArgsConstructor
 @Data

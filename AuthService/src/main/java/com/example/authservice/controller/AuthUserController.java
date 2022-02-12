@@ -1,10 +1,10 @@
 package com.example.authservice.controller;
 
 import com.example.authservice.domain.AuthUser;
-import com.example.authservice.facade.AuthUserDto;
+import com.example.authservice.facade.AuthUserDTO;
 import com.example.authservice.facade.NewUserDTO;
 import com.example.authservice.facade.RequestDTO;
-import com.example.authservice.facade.TokenDto;
+import com.example.authservice.facade.TokenDTO;
 import com.example.authservice.service.AuthUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -17,16 +17,16 @@ public class AuthUserController {
     AuthUserService authUserService;
 
     @PostMapping("/login")
-    public ResponseEntity<TokenDto> login(@RequestBody AuthUserDto dto){
-        TokenDto tokenDto = authUserService.login(dto);
+    public ResponseEntity<TokenDTO> login(@RequestBody AuthUserDTO dto){
+        TokenDTO tokenDto = authUserService.login(dto);
         if(tokenDto == null)
             return ResponseEntity.badRequest().build();
         return ResponseEntity.ok(tokenDto);
     }
 
     @PostMapping("/validate")
-    public ResponseEntity<TokenDto> validate(@RequestParam String token, @RequestBody RequestDTO dto){
-        TokenDto tokenDto = authUserService.validate(token, dto);
+    public ResponseEntity<TokenDTO> validate(@RequestParam String token, @RequestBody RequestDTO dto){
+        TokenDTO tokenDto = authUserService.validate(token, dto);
         if(tokenDto == null)
             return ResponseEntity.badRequest().build();
         return ResponseEntity.ok(tokenDto);
@@ -42,4 +42,3 @@ public class AuthUserController {
     }
 }
 
-https://www.youtube.com/watch?v=wF98ikyyKEI&list=PL4bT56Uw3S4yTSw5Cg1-mhgoS85fVeFkT&index=11

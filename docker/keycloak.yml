@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+  gft-keycloak:
+    image: quay.io/keycloak/keycloak:17.0.0
+    command:
+      [
+        'start-dev'
+
+#        kcadm create realms -s realm=Tutorial-realm -s enabled=true -o
+
+#        kcreg create -s clientId=tutorial-client -s "redirectUris=[\"http://localhost:8080/login/oauth2/code/tutorial-client/*\"]"
+
+#        kcadm.sh create users -s username=user -s enabled=true -r Tutorial-realm
+
+      ]
+    volumes:
+      - ./realm-config:/opt/jboss/keycloak/realm-config
+    environment:
+      - KEYCLOAK_ADMIN_PASSWORD=admin
+      - KEYCLOAK_ADMIN=admin
+      - DB_VENDOR=h2
+      # If you want to expose these ports outside your dev PC,
+      # remove the "127.0.0.1:" prefix
+    ports:
+      - 127.0.0.1:8180:8080
+

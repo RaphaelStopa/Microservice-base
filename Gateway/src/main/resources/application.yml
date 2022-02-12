@@ -7,6 +7,12 @@ spring:
 
   cloud:
     gateway:
+
+#     Isto daqui é para o Keycloack
+      default-filters:
+        - TokenRelay
+#     ====
+
       discovery:
         locator:
           enabled: true
@@ -14,9 +20,15 @@ spring:
         - id: ONE-SERVICE
           uri:
             lb://ONE-SERVICE
+
+#         Importante que tenha o mesmo nome da classe. Copie e cole para nao errar. Isto eh para JWT
+#          filters:
+#            - AuthFilter
+#        ====
+#          Este aqui é para o KeyCloak
           filters:
-#            Importante que tenha o mesmo nome da classe. Copie e cole para nao errar
-            - AuthFilter
+            - RemoveRequestHeader=Cookie
+#        ====
 
           predicates:
             - Path=/one/**
@@ -32,6 +44,28 @@ spring:
           predicates:
             - Path=/auth/**
 
+# Isto é só para o Keycloack
+# https://www.youtube.com/watch?v=uzou3vdmu9Q&list=PL4bT56Uw3S4yTSw5Cg1-mhgoS85fVeFkT&index=12
+  security:
+    oauth2:
+      client:
+        provider:
+          keycloak:
+            authorization-uri: http://localhost:8180/realms/tutorial-realm/protocol/openid-connect/auth
+            userinfo-uri: http://localhost:8180/realms/tutorial-realm/protocol/openid-connect/userinfo
+            user-name-attribute: preferred_username
+            token-uri: http://localhost:8180/realms/tutorial-realm/protocol/openid-connect/token
+        registration:
+#          este é o nome que cadastrei no keyloger
+          tutorial-client:
+            provider: keycloak
+            client-id: tutorial-client
+            client-secret: IK9JkOMFwbkJNra5tq7X81eI6h7ZAQ4V
+            authorization-grant-type: authorization_code
+#            o que coloquei la
+            redirect-uri: "{baseUrl}/login/oauth2/code/tutorial-client"
+
+
 
 
 eureka:
@@ -42,6 +76,5 @@ eureka:
       default-zone: http://localhost:8761/eureka/
   instance:
     hostname: localhost
-
 
 

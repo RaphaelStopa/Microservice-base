@@ -1,4 +1,3 @@
-
 server:
   port: ${PORT:${SERVER_PORT:0}}
   servlet:
@@ -34,7 +33,7 @@ spring:
   application:
     name: AUTH-SERVICE
 
-#VER AQUI
+# TODO VER AQUI
 admin-paths:
   paths:
     -

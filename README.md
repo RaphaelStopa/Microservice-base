@@ -1,4 +1,4 @@
-# Base de microsserviços em java com Eureka (discovery), Resilience4j (circuit breaker) JTW, Zipkin (sistema de rastreamento distribuído, precisa do .jar e rodar o mesmo)
+# Base de microsserviços em java com Eureka (discovery), Resilience4j (circuit breaker) JTW, Zipkin (sistema de rastreamento distribuído, precisa do .jar e rodar o mesmo) E keycloak com docker.
 
 Como começa:
 Nas dependências de cada serviço, basta você colocar o que colocaria em um API que você quisesse fazer normalmente. Apenas acrescente um Eureka client.
@@ -24,8 +24,7 @@ FALTA FAZER:
 
 ````
 
-Autenticação com JWT. De preferencia marcando, agora tera que refatorar tudo
-
+Fiz a autenticação com JWT mas tem que refatorar. Pode melhorar e muito.
 
 Retirar files inúteis do Shared.
 
@@ -41,4 +40,10 @@ Fazer um banco para cada quando terminar aqui!
 
 JWT funciona mais precisa melhor a exposicao de erro. Muito generico
 
-talvez ja fzer um docker para cada DB com as migrations
+talvez ja fazer um docker para cada DB com as migrations
+
+não coloquei Zipink no gitIgnore mas coloquei o keycloak, apesar de usar docker
+
+ver como faz para pegar o logado pelo oauth2
+
+peque o cockie na porta 8080 e tente este endpoin http://localhost:8080/one/hello com tudo ligado menos a auth service 

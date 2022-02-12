@@ -23,7 +23,7 @@ public class RouteValidator {
     }
 
     public boolean isAdminPath(RequestDTO dto) {
-        // VER AQUI
+        // TODO VER AQUI
         return paths.stream().anyMatch(p -> Pattern.matches(p.getUri(), dto.getUri()) && p.getMethod().equals(dto.getMethod()));
     }
 }

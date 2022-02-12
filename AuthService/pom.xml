@@ -29,7 +29,7 @@
             <version>1.3.2</version>
         </dependency>
 
-<!--        coloquei aqui mais esta depe tem problemas. Substituir futuramente-->
+<!--       TODO coloquei aqui mais esta dependencia. Tem problemas. Substituir futuramente-->
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt</artifactId>

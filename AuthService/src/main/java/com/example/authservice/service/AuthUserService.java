@@ -1,10 +1,10 @@
 package com.example.authservice.service;
 
 import com.example.authservice.domain.AuthUser;
-import com.example.authservice.facade.AuthUserDto;
+import com.example.authservice.facade.AuthUserDTO;
 import com.example.authservice.facade.NewUserDTO;
 import com.example.authservice.facade.RequestDTO;
-import com.example.authservice.facade.TokenDto;
+import com.example.authservice.facade.TokenDTO;
 import com.example.authservice.repository.AuthUserRepository;
 import com.example.authservice.security.JwtProvider;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,22 +38,22 @@ public class AuthUserService {
         return authUserRepository.save(authUser);
     }
 
-    public TokenDto login(AuthUserDto dto) {
+    public TokenDTO login(AuthUserDTO dto) {
         Optional<AuthUser> user = authUserRepository.findByUserName(dto.getUserName());
         if(!user.isPresent())
             return null;
         if(passwordEncoder.matches(dto.getPassword(), user.get().getPassword()))
-            return new TokenDto(jwtProvider.createToken(user.get()));
+            return new TokenDTO(jwtProvider.createToken(user.get()));
         return null;
     }
 
-    public TokenDto validate(String token, RequestDTO dto) {
+    public TokenDTO validate(String token, RequestDTO dto) {
         if(!jwtProvider.validate(token, dto))
             return null;
         String username = jwtProvider.getUserNameFromToken(token);
         if(!authUserRepository.findByUserName(username).isPresent())
             return null;
-        return new TokenDto(token);
+        return new TokenDTO(token);
     }
 }
 

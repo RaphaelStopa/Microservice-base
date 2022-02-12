@@ -22,6 +22,13 @@ spring:
     name: ONE-SERVICE
     zipkin: http://localhost:9411
 
+#    isto é só para oauth2
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8180/realms/tutorial-realm
+
 
 
 

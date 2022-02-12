@@ -1,14 +1,12 @@
 package com.example.serviceone.rest;
 
-import com.example.shared.model.Shared;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
-import org.springframework.context.annotation.Bean;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.orm.jpa.support.SharedEntityManagerBean;
+import org.springframework.http.*;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
+import org.springframework.security.oauth2.jwt.Jwt;
 
 @RestController
 //Não precisa disto pq já coloquei no application
@@ -20,7 +18,7 @@ public class TestResource {
 
     private RestTemplate restTemplate;
 
-    // Tetse para ver se o artifact, esta ok no Pom
+    // Teste para ver se o artifact, esta ok no Pom
 //    Shared nha = new Shared();
 
 
@@ -39,11 +37,23 @@ public class TestResource {
     @CircuitBreaker(name= HELLO_SERVICE, fallbackMethod = "helloFallback")
     public ResponseEntity<String> sayHello(){
 
-//        vi em um tudo que despois de resgitrado o cara conseguia por apenas o nome do service no local do localhost:8080 e continuava a dar certo
-        // teste isto, ets em um TODO no cpnfigue
+        /* Toda esta parte seria so com o JWT
+//        vi em um tudo que depois de resgitrado o cara conseguia por apenas o nome do service no local do localhost:8080 e continuava a dar certo
+        // teste isto, em um TODO no configue
 
-        String response = restTemplate.getForObject("http://TWO-SERVICE/two", String.class);
+        String response = restTemplate.getForObject("http://TWO-SERVICE/two/", String.class);
         return new ResponseEntity<String>(response, HttpStatus.OK);
+         */
+
+//        Esta parte já é com o oauth2 e seria correto estar em um service
+
+        Jwt jwt = (Jwt) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        HttpHeaders httpHeaders = new HttpHeaders();
+        httpHeaders.add("Authorization", "Bearer " + jwt.getTokenValue());
+
+        ResponseEntity<String> response = restTemplate.exchange("http://TWO-SERVICE/two/", HttpMethod.GET,new HttpEntity<>(httpHeaders), String.class);
+        // TODO errado aqui
+        return new ResponseEntity<String>(response.getBody(), HttpStatus.OK);
     }
     public ResponseEntity<String> helloFallback(Exception e){
         return new ResponseEntity<String>("Service is down", HttpStatus.OK);

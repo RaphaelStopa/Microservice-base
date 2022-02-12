@@ -19,7 +19,7 @@
         <spring-cloud.version>2021.0.0</spring-cloud.version>
     </properties>
 
-<!--    No eureka server so precisa da dependencia dele mesmo-->
+<!--    No eureka server só precisa da dependência dele mesmo-->
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>

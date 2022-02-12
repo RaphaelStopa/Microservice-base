@@ -40,6 +40,20 @@
             <optional>true</optional>
         </dependency>
 
+<!--        Coloquei pelo keyclok ambos. O JWT fica no auth-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-oauth2-client</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+<!--        ====-->
+
+
+
     </dependencies>
     <dependencyManagement>
         <dependencies>
