@@ -4,13 +4,17 @@ services:
     image: quay.io/keycloak/keycloak:17.0.0
     command:
       [
-        'start-dev'
+        'start-dev',
 
-#        kcadm create realms -s realm=Tutorial-realm -s enabled=true -o
+#        nao sei de os comando abaixo sao possiveis mais talvez seja possivel imprtar os dados a baixo
 
-#        kcreg create -s clientId=tutorial-client -s "redirectUris=[\"http://localhost:8080/login/oauth2/code/tutorial-client/*\"]"
+#        'create realms -s realm=Tutorial-realm -s enabled=true -o',
 
-#        kcadm.sh create users -s username=user -s enabled=true -r Tutorial-realm
+#        'create -s clientId=tutorial-client -s "redirectUris=[\"http://localhost:8080/login/oauth2/code/tutorial-client/*\"]"',
+#
+#        'create users -s username=user -s enabled=true -r Tutorial-realm'
+
+#        docker exec <CONTAINER> /opt/jboss/keycloak/bin/add-user-keycloak.sh -u <USERNAME> -p <PASSWORD>
 
       ]
     volumes:
