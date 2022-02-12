@@ -6,6 +6,8 @@ services:
       [
         'start-dev',
 
+#        TODO Seria bom fazer um teste juntando um app e um DB em um Docker
+
 #        nao sei de os comando abaixo sao possiveis mais talvez seja possivel imprtar os dados a baixo
 
 #        'create realms -s realm=Tutorial-realm -s enabled=true -o',
