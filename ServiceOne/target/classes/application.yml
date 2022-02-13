@@ -22,7 +22,7 @@ spring:
     name: ONE-SERVICE
     zipkin: http://localhost:9411
 
-#    isto eh so para o oauth2
+#    isto é só para oauth2
   security:
     oauth2:
       resourceserver:

@@ -8,7 +8,9 @@ services:
 
 #        TODO Seria bom fazer um teste juntando um app e um DB em um Docker
 
-#        nao sei de os comando abaixo sao possiveis mais talvez seja possivel imprtar os dados a baixo
+#        nao sei de os comando abaixo sao possiveis mais talvez seja possivel imprtar os dados a baixo. Eles estao no Json realm-export. Entao seria algo assim  '-Dkeycloak.migration.dir=/opt/jboss/keycloak/realm-config',
+
+#ou  - KEYCLOAK_IMPORT=/tmp/realm-export.json -Dkeycloak.profile.feature.upload_scripts=enabled e falta so exportar users mais nao sei como isto
 
 #        'create realms -s realm=Tutorial-realm -s enabled=true -o',
 
